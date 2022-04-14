@@ -1,21 +1,35 @@
-<div style="font-family: Roboto, sans-serif; display: flex;">
-    <div id="logo" style="padding: 10px;">
+<div style="font-family: Roboto, sans-serif;">
+    <table>
+        <tbody>
+            <tr>
+                <td style="border-right: 1px solid {{theme.separator}};">
+                    <div id="logo" style="padding: 10px;">
+                        <img style="height: 96px;" src="{{logo}}" alt="{{brand}}">
+                    </div>
+                </td>
+                <td>
+                    <div id="content" style="padding: 10px;">
+                        <div id="name" style="font-size: 20px; font-weight: 300; margin-bottom: 5px;">{{name}}</div>
+                        <div id="title" style="font-size: 14px; font-weight: 600; margin-bottom: 5px; color: #888888;">{{title}}</div>
+                        <div id="separator" style="border-top: 2px solid {{theme.separator}}; margin-bottom: 8px;"></div>
+                        <div id="social" style="max-width: 340px;">
+                            <table>
+                                {{#social socials}}
+                                <a id="{{id}}" href="{{link}}" style="display: inline-flex; align-items: center; text-decoration: none !important; color:#333333;">
+                                    <img style="height: 24px;" src="{{icon}}" alt="{{../brand}}"/>
+                                    <span style="font-size: 14px; margin-left: 3px;">{{account}}</span>
+                                </a>    
+                                {{/social}}
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {{!-- <div id="logo" style="padding: 10px;">
         <img style="height: 96px;" src="{{logo}}" alt="{{brand}}">
-    </div>
-    <div id="divider" style="border-left: 1px solid {{theme.separator}};"></div>
-    <div id="content" style="padding: 10px;">
-        <div id="name" style="font-size: 20px; font-weight: 300; margin-bottom: 5px;">{{name}}</div>
-        <div id="title" style="font-size: 14px; font-weight: 600; margin-bottom: 5px; color: #888888;">{{title}}</div>
-        <div id="separator" style="border-top: 2px solid {{theme.separator}}; margin-bottom: 8px;"></div>
-        <div id="social" style="max-width: 340px;">
-            <table>
-                {{#social socials}}
-                <a id="{{id}}" href="{{link}}" style="display: inline-flex; align-items: center; text-decoration: none; color:#333333;">
-                    <img style="height: 24px;" src="{{icon}}" alt="{{../brand}}"/>
-                    <span style="font-size: 14px; margin-left: 3px;">{{account}}</span>
-                </a>    
-                {{/social}}
-            </table>
-        </div>
-    </div>
+    </div> --}}
+    {{!-- <div id="divider" style="border-left: 1px solid {{theme.separator}};"></div> --}}
+    
 </div>
